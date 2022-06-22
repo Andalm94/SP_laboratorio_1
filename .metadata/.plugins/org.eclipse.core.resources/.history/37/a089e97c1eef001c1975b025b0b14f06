@@ -573,16 +573,7 @@ LinkedList* ll_subList(LinkedList* this,int from,int to){
     LinkedList* sublist = NULL;
     void* elementoClonado = NULL;
 
-	//---------------------------------------------------------------------------------------------
-	//Descripcion:
-	//**1-Valido que los punteros a las LLs no sean NULL.
-    //** Validacion del from: que sea mayor o igual a 0, que sea menor que el 'size'
-    //** Validacion del to: que sea mayor o igual al from. Que sea menor o igual al 'size'
-    //**2-Declaro una nueva LL y valido que no sea NULL.
-    //**3-Realizo un ciclo de iteracion desde el from (i=from) hasta el to(i<to)
-    //**En cada iteracion obtengo el elemento que deseo clonar mediante 'll_get' y lo agrego a la nueva LL mediante 'll_add'
-    //**3-Retorno la nueva lista
-	//---------------------------------------------------------------------------------------------
+
     if(this != NULL && from >= 0 && from < ll_len(this) && to >= from && to <= ll_len(this)){
     	sublist = ll_newLinkedList();
     	if(sublist != NULL){
@@ -609,16 +600,6 @@ LinkedList* ll_subList(LinkedList* this,int from,int to){
 LinkedList* ll_clone(LinkedList* this){
     LinkedList* listaClonada = NULL;
 
-    //---------------------------------------------------------------------------------------------
-	//Descripcion:
-	//**1-Valido que los punteros a las LLs no sean NULL.
-    //**2-Declaro una nueva LL y le asigno el retorno de la funcion 'll_sublist'
-    //****'ll_sublist' Recibe como parametros:
-    //**** this (la lista a clonar)
-    //**** to: 0 (se clona desde el inicio)
-    //**** from el 'size' de la lista a clonar (hasta el final)
-    //**3-Retorna la lista clonada
-	//---------------------------------------------------------------------------------------------
     if(this != NULL){
     	listaClonada = ll_subList(this, 0, ll_len(this));
     }
@@ -643,18 +624,7 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order){
     int retornoPFunc;
 
 
-    //---------------------------------------------------------------------------------------------
-	//Descripcion:
-	//**1-Valido que el puntero a la LL no sea NULL, que el puntero a la funcion no sea NULL, y que 'order' sea 0 o 1
-    //**2-Obtengo el 'size' de la LL mediante la funcion 'll_len'
-    //**3-Se ingresa a un ciclo do-while hasta que la variable 'estaOrdenado' no cambie su valor de 1
-    //**4-Se ingresa a un ciclo for donde se recorreran los nodos de la LL.
-    //**5-Se obtienen 2 nodos, uno en el index siguiente del otro y se determina cual es mayor mediante la funcion pasada por parametro.
-    //**6-Se realiza un swap solo si:
-    //****la funcion retorna mayor a 0 y el orden deseado es ascendente (1)
-    //****la funcion retorna menor a y y el orden deseado es descendente (0)
-    //****En caso de haber swap, la variable 'estaOrdenado' se le asigna 0 y vuelve a realizarse el ciclo do-while
-	//---------------------------------------------------------------------------------------------
+
     if(this != NULL && pFunc!= NULL && (order == 0 || order == 1) ){
     	len = ll_len(this);
 
