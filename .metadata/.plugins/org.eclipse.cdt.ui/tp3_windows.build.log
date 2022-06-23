@@ -1,1 +1,7 @@
-Info: Nothing to build for tp3_windows
+20:45:29 **** Incremental Build of configuration Debug for project tp3_windows ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o LinkedList.o "..\\LinkedList.c" 
+gcc "-LC:\\Users\\Andres\\Desktop\\UTN\\1er Cuatri\\Programacion1\\SP_laboratorio_1\\tp3_windows" -o tp3_windows.exe Controller.o LinkedList.o Passenger.o UTN.o main.o parser.o -lLinkedList 
+
+20:45:29 Build Finished. 0 errors, 0 warnings. (took 280ms)
+

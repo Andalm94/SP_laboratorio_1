@@ -495,3 +495,75 @@ int controller_saveAsBinary(char* path , LinkedList* pArrayListPassenger){
     return retorno;
 }
 
+//---------------------------------------------------------------------------------------------------------
+int controller_informarPasajeros(LinkedList* pArrayListPassenger){
+	int retorno = -1;
+	int opcionIngresada;
+	int opcionIngresadaInformes;
+
+	LinkedList* linkedListFiltrada = NULL;
+
+	 if(pArrayListPassenger != NULL){
+		 retorno = 0;
+
+		 mostrarMenuInformes();
+		 if(getInt(&opcionIngresada, "\n", "No existe esa opcion\n", 1, 3, 3) == 0){
+			 switch(opcionIngresada){
+
+
+			 	case 1: //---------------------------------------------------------> CONTEO
+			 		if(getInt(&opcionIngresadaInformes, "Contabilizar pasajeros:\n 1) Economy\n 2) Executive\n 3) FirstClass\n", "ERROR. Intente nuevamente", 1, 3, 3) == 0){
+
+			 			switch(opcionIngresadaInformes){
+			 				case 1:
+			 					printf("Pasajeros EconomyClass: %d \n", ll_count(pArrayListPassenger, esEconomy));
+			 					break;
+			 				case 2:
+			 					printf("Pasajeros ExecutiveClass: %d \n", ll_count(pArrayListPassenger, esExecutive));
+			 					break;
+			 				case 3:
+			 					printf("Pasajeros FirstClass: %d \n", ll_count(pArrayListPassenger, esFirst));
+			 					break;
+			 			}
+
+			 		}
+			 		break;
+
+
+			 	case 2: //---------------------------------------------------------> FILTRO
+			 		if(getInt(&opcionIngresadaInformes, "Filtrar pasajeros:\n 1) Economy\n 2) Executive\n 3) FirstClass\n", "ERROR. Intente nuevamente", 1, 3, 3) == 0){
+
+			 			switch(opcionIngresadaInformes){
+			 				case 1:
+			 					linkedListFiltrada = ll_filter(pArrayListPassenger, esEconomy);
+			 					controller_saveAsText("listaFiltradaEconomy.csv", linkedListFiltrada);
+			 					break;
+
+			 				case 2:
+			 					linkedListFiltrada = ll_filter(pArrayListPassenger, esExecutive);
+			 					controller_saveAsText("listaFiltradaExecutive.csv", linkedListFiltrada);
+			 					break;
+			 				case 3:
+			 					linkedListFiltrada = ll_filter(pArrayListPassenger, esFirst);
+			 					controller_saveAsText("listaFiltradaFirstClass.csv", linkedListFiltrada);
+			 					break;
+			 			}
+			 		}
+			 		break;
+
+
+			 	case 3: //---------------------------------------------------------> MAPEO
+			 		if(getInt(&opcionIngresadaInformes, "Ordenar de manera:\n 0) Descendente\n 1) Ascendente\n", "ERROR. Intente nuevamente", 0, 1, 3) == 0){
+
+			 		}
+			 		break;
+
+
+
+			 }
+		 }
+	 }
+
+
+	return retorno;
+}

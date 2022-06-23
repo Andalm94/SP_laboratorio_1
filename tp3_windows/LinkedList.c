@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "LinkedList.h"
-
+#include "Passenger.h"
 
 static Node* getNode(LinkedList* this, int nodeIndex);
 static int addNode(LinkedList* this, int nodeIndex,void* pElement);
@@ -146,7 +146,7 @@ static int addNode(LinkedList* this, int nodeIndex,void* pElement){
     		else{
     			pAuxNodo = getNode(this, nodeIndex-1);
     			if(pAuxNodo != NULL){
-    				pNuevoNodo->pNextNode = pAuxNodo->pNextNode;
+    				pNuevoNodo->pNextNode = pAuxNodo->pNextNode; //En pAuxNodo->pNextNode hay NULL porque es el ultimo nodo de la LL
     				pAuxNodo->pNextNode = pNuevoNodo;
 
         			pNuevoNodo->pElement = pElement;
@@ -684,3 +684,94 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order){
 
 }
 
+//---------------------------------------------------------------------------------------------------------
+//--------------------------------------------FUNCIONES SEGUNDO PARCIAL------------------------------------
+
+int ll_count(LinkedList* this, int (*fn)(void* element)){
+	int acumulador = -1;
+	void* pElement;
+
+	if(this != NULL && fn != NULL){
+		acumulador = 0;
+
+    	for(int i=0; i<ll_len(this); i++){
+
+    		pElement = ll_get(this, i);
+    		acumulador += fn(pElement);
+
+    	}
+
+	}
+
+	return acumulador;
+}
+
+LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element)){
+	LinkedList* newLinkedList = NULL;
+	void* pElement = NULL;
+
+
+    if(this != NULL){
+    	newLinkedList = ll_newLinkedList();
+
+    	if(newLinkedList != NULL){
+
+        	for(int i=0; i<ll_len(this); i++){
+
+        		pElement = ll_get(this, i);
+        		if(fn(pElement) == 1){
+        			ll_add(newLinkedList, pElement);
+        		}
+
+
+        	}
+
+    	}
+    }
+
+    return newLinkedList;
+}
+
+LinkedList* ll_map(LinkedList* this, void (*fn)(void* element)){
+	LinkedList* newLinkedList = NULL;
+	void* pPasajero = NULL;
+	int tipoDePasajero_codigoInterno;
+	char tipoDePasajeroStr[16];
+
+
+	if(this != NULL){
+
+		printf("\n---------------------------------------------------------------------------------------------------\n");
+		printf("ID        NOMBRE         APELLIDO       PRECIO       CODIGO DE VUELO     TIPO             ESTADO          MILLAS ACUMULADAS\n    ");
+		printf("---------------------------------------------------------------------------------------------------\n");
+
+		for(int i=0; i<ll_len(this); i++){
+			pPasajero = ll_get(this, i);
+
+
+			if(pPasajero != NULL && calcularMillasAcumuladas(pPasajero) == 0){
+
+				//Obtengo el tipo de pasajero(char[]) y el codigo interno (int);
+				tipoDePasajero_codigoInterno = Passenger_getTipoPasajero(pPasajero);
+				decodificarTipoDePasajero(tipoDePasajeroStr, tipoDePasajero_codigoInterno);
+
+
+				printf("%-10d",  Passenger_getId(pPasajero));
+				printf("%-15s", Passenger_getNombre(pPasajero));
+				printf("%-15s", Passenger_getApellido(pPasajero));
+				printf("%-15.2f", Passenger_getPrecio(pPasajero));
+				printf("%-15s", Passenger_getCodigoVuelo(pPasajero));
+				printf("%-20s", tipoDePasajeroStr);
+				printf("%-15s\n", Passenger_getEstadoDeVuelo(pPasajero));
+				printf("%-15d\n", Passenger_getMillasAcumuladas(pPasajero));
+			}
+
+
+		}
+	}
+
+
+
+
+	return newLinkedList;
+}

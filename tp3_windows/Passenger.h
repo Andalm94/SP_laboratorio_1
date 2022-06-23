@@ -17,6 +17,7 @@ typedef struct
 	int tipoPasajero;
 	char codigoVuelo[16];
 	char estadoDeVuelo[16];
+	int millasAcumuladas;
 
 }Passenger;
 
@@ -126,5 +127,15 @@ float Passenger_getPrecio(Passenger* this);
 
 int Passenger_setEstadoDeVuelo(Passenger* this,char* estadoDeVuelo);
 char* Passenger_getEstadoDeVuelo(Passenger* this);
+
+int Passenger_setMillasAcumuladas(Passenger* this,int millasAcumuladas); //Parcial 2
+int Passenger_getMillasAcumuladas(Passenger* this); //Parcial 2
+
+//-------------------------------------------------------------------------------------------------------
+int esEconomy(void* pasajero);
+int esExecutive(void* pasajero);
+int esFirst(void* pasajero);
+
+int calcularMillasAcumuladas(void *pasajero);
 
 #endif /* PASSENGER_H_ */

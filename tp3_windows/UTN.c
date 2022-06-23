@@ -202,7 +202,20 @@ void mostrarMenuPrincipal(){
 	printf("7. Ordenar pasajeros\n");
 	printf("8. Guardar los datos de los pasajeros en el archivo data.csv (modo texto).\n");
 	printf("9. Guardar los datos de los pasajeros en el archivo data.bin (modo binario).\n");
-	printf("10. Salir\n");
+	printf("10. Menu Informes\n");
+	printf("11. Salir\n");
+	printf("=================================================================================/\n");
+}
+
+
+void mostrarMenuInformes(){
+	printf("\n");
+	printf("============================MENU INFORMES=======================================/\n");
+	printf("\n");
+	printf("1. Pasajeros por clase.\n");
+	printf("2. Filtrar pasajeros.\n");
+	printf("3. Calcular millas acumuladas.\n");
+	printf("4. Volver al menu anterior\n");
 	printf("=================================================================================/\n");
 }
 

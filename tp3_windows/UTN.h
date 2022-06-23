@@ -75,6 +75,7 @@ int validarEsFloat(char * cadena);
 //----------------------------------------- MENUS ----------------------------------------------------------------------------
 
 void mostrarMenuPrincipal();
+void mostrarMenuInformes();
 void mostrarMenuModificaciones();
 void mostrarMenuOrdenamientos();
 

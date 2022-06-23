@@ -24,6 +24,7 @@ Passenger* Passenger_new(){
 		Passenger_setTipoPasajero(punteroPassenger, 0);
 		Passenger_setPrecio(punteroPassenger,0);
 		Passenger_setEstadoDeVuelo(punteroPassenger, " ");
+		Passenger_setMillasAcumuladas(punteroPassenger, 0);
 
 	}
 
@@ -445,3 +446,98 @@ char* Passenger_getEstadoDeVuelo(Passenger* this){
 	return this->estadoDeVuelo;
 }
 
+int Passenger_setMillasAcumuladas(Passenger* this,int millasAcumuladas){
+	int retorno = -1;
+
+	if(this != NULL && millasAcumuladas > 0){
+		this->millasAcumuladas = millasAcumuladas;
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
+int Passenger_getMillasAcumuladas(Passenger* this){
+	return this->millasAcumuladas;
+}
+
+
+//---------------------------------------------------------------------------------------------------------
+//--------------------------------------------FUNCIONES SEGUNDO PARCIAL------------------------------------
+
+
+int esEconomy(void* pasajero){
+	int returnAux = 0;
+	Passenger* pPasajero;
+
+	if(pasajero != NULL){
+		pPasajero = (Passenger*) pasajero;
+
+		if(pPasajero->tipoPasajero == 1){
+			returnAux = 1;
+		}
+
+	}
+
+	return returnAux;
+}
+
+int esExecutive(void* pasajero){
+	int returnAux = 0;
+	Passenger* pPasajero;
+
+	if(pasajero != NULL){
+		pPasajero = (Passenger*) pasajero;
+
+		if(pPasajero->tipoPasajero == 2){
+			returnAux = 1;
+		}
+
+	}
+
+	return returnAux;
+}
+
+int esFirst(void* pasajero){
+	int returnAux = 0;
+	Passenger* pPasajero;
+
+	if(pasajero != NULL){
+		pPasajero = (Passenger*) pasajero;
+
+		if(pPasajero->tipoPasajero == 3){
+			returnAux = 1;
+		}
+
+	}
+
+	return returnAux;
+}
+
+//-----------------------------
+
+int calcularMillasAcumuladas(void *pasajero){
+	int returnAux = -1;
+	Passenger* pPasajero;
+	int millasAcumuladas;
+
+	if(pasajero != NULL){
+		returnAux = 0;
+		pPasajero = (Passenger*) pasajero;
+
+		millasAcumuladas = Passenger_getPrecio(pPasajero) / 100;
+
+		if(pPasajero->tipoPasajero == 2){
+			millasAcumuladas = millasAcumuladas * 3;
+		}
+
+		if(pPasajero->tipoPasajero == 3){
+			millasAcumuladas = millasAcumuladas * 2;
+		}
+
+		Passenger_setMillasAcumuladas(pPasajero, millasAcumuladas);
+
+	}
+
+	return returnAux;
+}
