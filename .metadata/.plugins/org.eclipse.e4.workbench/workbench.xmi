@@ -167,14 +167,20 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_7FZ1wO3cEeyCtrf_ZyAQVg" elementId="org.eclipse.ui.editorss" selectedElement="_7FZ1we3cEeyCtrf_ZyAQVg">
-      <children xsi:type="basic:PartStack" xmi:id="_7FZ1we3cEeyCtrf_ZyAQVg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_GB9p8O3dEeyCtrf_ZyAQVg">
+      <children xsi:type="basic:PartStack" xmi:id="_7FZ1we3cEeyCtrf_ZyAQVg" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_BSb_wO3dEeyCtrf_ZyAQVg">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <children xsi:type="basic:Part" xmi:id="_BSb_wO3dEeyCtrf_ZyAQVg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="main.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+<<<<<<< HEAD
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; partName=&quot;main.c&quot; title=&quot;main.c&quot; tooltip=&quot;tp3_windows/main.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/tp3_windows/main.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;6956&quot; selectionTopPixel=&quot;2756&quot;/>&#xD;&#xA;&lt;/editor>"/>
+=======
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;main.c&quot; partName=&quot;main.c&quot; title=&quot;main.c&quot; tooltip=&quot;tp3_windows/main.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/tp3_windows/main.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;7197&quot; selectionTopPixel=&quot;2505&quot;/>&#xD;&#xA;&lt;/editor>"/>
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_GB9p8O3dEeyCtrf_ZyAQVg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LinkedList.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;LinkedList.c&quot; partName=&quot;LinkedList.c&quot; title=&quot;LinkedList.c&quot; tooltip=&quot;tp3_windows/LinkedList.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/tp3_windows/LinkedList.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;28693&quot; selectionTopPixel=&quot;10695&quot;/>&#xD;&#xA;&lt;/editor>"/>
@@ -182,6 +188,7 @@
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
         </children>
+<<<<<<< HEAD
         <children xsi:type="basic:Part" xmi:id="_edK6gPNBEeyVu57Ghj2n1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Passenger.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;Passenger.c&quot; partName=&quot;Passenger.c&quot; title=&quot;Passenger.c&quot; tooltip=&quot;tp3_windows/Passenger.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/tp3_windows/Passenger.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;47&quot; selectionOffset=&quot;12601&quot; selectionTopPixel=&quot;3994&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
@@ -208,6 +215,10 @@
         </children>
         <children xsi:type="basic:Part" xmi:id="_AlLaQPNFEeyVu57Ghj2n1g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="parser.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;parser.c&quot; partName=&quot;parser.c&quot; title=&quot;parser.c&quot; tooltip=&quot;tp3_windows/parser.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/tp3_windows/parser.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;232&quot;/>&#xD;&#xA;&lt;/editor>"/>
+=======
+        <children xsi:type="basic:Part" xmi:id="_GB9p8O3dEeyCtrf_ZyAQVg" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="LinkedList.c" iconURI="platform:/plugin/org.eclipse.cdt.ui/icons/obj16/c_file_obj.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.cdt.ui.editor.CEditor&quot; name=&quot;LinkedList.c&quot; partName=&quot;LinkedList.c&quot; title=&quot;LinkedList.c&quot; tooltip=&quot;tp3_windows/LinkedList.c&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/tp3_windows/LinkedList.c&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;26439&quot; selectionTopPixel=&quot;9511&quot;/>&#xD;&#xA;&lt;/editor>"/>
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.cdt.ui.editor.CEditor</tags>
@@ -326,7 +337,11 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7B1kYO3cEeyCtrf_ZyAQVg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
+<<<<<<< HEAD
         <children xsi:type="menu:HandledToolItem" xmi:id="_hGBTcPM-EeyVu57Ghj2n1g" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_6z1k1O3cEeyCtrf_ZyAQVg"/>
+=======
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2PxDEPLrEeyH6cnyQquUtA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_6z1k1O3cEeyCtrf_ZyAQVg"/>
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7B1kYe3cEeyCtrf_ZyAQVg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -357,7 +372,11 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7B2LcO3cEeyCtrf_ZyAQVg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
+<<<<<<< HEAD
         <children xsi:type="menu:HandledToolItem" xmi:id="_hGDIoPM-EeyVu57Ghj2n1g" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_6z097-3cEeyCtrf_ZyAQVg"/>
+=======
+        <children xsi:type="menu:HandledToolItem" xmi:id="_2PzfUPLrEeyH6cnyQquUtA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_6z097-3cEeyCtrf_ZyAQVg"/>
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_7B2Lce3cEeyCtrf_ZyAQVg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

@@ -1184,7 +1184,11 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:654)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:591)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1462)
+<<<<<<< HEAD
 !SESSION 2022-06-22 08:17:45.373 -----------------------------------------------
+=======
+!SESSION 2022-06-23 08:56:55.009 -----------------------------------------------
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
 eclipse.buildId=4.20.0.I20210611-1600
 java.version=16.0.2
 java.vendor=Oracle Corporation
@@ -1192,12 +1196,17 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
 Framework arguments:  -product org.eclipse.epp.package.cpp.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2022-06-22 08:17:52.069
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2022-06-23 08:57:08.077
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+<<<<<<< HEAD
 
 !ENTRY org.eclipse.oomph.setup.core 2 0 2022-06-22 08:17:58.626
 !MESSAGE The Eclipse Git-hosted URI 'http://git.eclipse.org/c/oomph/org.eclipse.oomph.git/plain/setups/interim/GMFRuntime.setup' is blocked for direct access.
@@ -2712,6 +2721,9 @@ java.lang.NullPointerException
 !STACK 0
 java.lang.NullPointerException
 !SESSION 2022-06-23 20:47:12.977 -----------------------------------------------
+=======
+!SESSION 2022-06-23 08:58:44.125 -----------------------------------------------
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
 eclipse.buildId=4.20.0.I20210611-1600
 java.version=16.0.2
 java.vendor=Oracle Corporation
@@ -2719,7 +2731,11 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_AR
 Framework arguments:  -product org.eclipse.epp.package.cpp.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.cpp.product
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.egit.ui 2 0 2022-06-23 20:47:21.753
+=======
+!ENTRY org.eclipse.egit.ui 2 0 2022-06-23 08:58:53.835
+>>>>>>> ef7de86132388c92d1d58c9bb462a37530c6b115
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\Andres'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
