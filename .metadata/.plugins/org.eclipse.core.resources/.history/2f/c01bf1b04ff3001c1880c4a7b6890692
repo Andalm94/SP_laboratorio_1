@@ -749,9 +749,7 @@ LinkedList* ll_map(LinkedList* this, void (*fn)(void* element)){
 			pPasajero = ll_get(this, i);
 
 
-			if(pPasajero != NULL){
-
-				fn(pPasajero); //modifico el campo de la lista
+			if(pPasajero != NULL && calcularMillasAcumuladas(pPasajero) == 0){
 
 				//Obtengo el tipo de pasajero(char[]) y el codigo interno (int);
 				tipoDePasajero_codigoInterno = Passenger_getTipoPasajero(pPasajero);
@@ -764,7 +762,7 @@ LinkedList* ll_map(LinkedList* this, void (*fn)(void* element)){
 				printf("%-15.2f", Passenger_getPrecio(pPasajero));
 				printf("%-15s", Passenger_getCodigoVuelo(pPasajero));
 				printf("%-20s", tipoDePasajeroStr);
-				printf("%-15s", Passenger_getEstadoDeVuelo(pPasajero));
+				printf("%-15s\n", Passenger_getEstadoDeVuelo(pPasajero));
 				printf("%-15d\n", Passenger_getMillasAcumuladas(pPasajero));
 			}
 

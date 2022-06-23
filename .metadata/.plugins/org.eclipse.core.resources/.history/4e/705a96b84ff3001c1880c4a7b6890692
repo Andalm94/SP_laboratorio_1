@@ -554,7 +554,7 @@ int controller_informarPasajeros(LinkedList* pArrayListPassenger){
 
 			 	case 3: //---------------------------------------------------------> MAPEO
 			 		if(0 == 0){
-			 			ll_map(pArrayListPassenger, calcularMillasAcumuladas);
+
 			 		}
 			 		break;
 
